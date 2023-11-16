@@ -1,0 +1,38 @@
+// Головна секція
+.hero {
+    background-color: var(--bg-cl);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .hero-container {
+    padding: 0;
+  }
+  
+  .hero__title {
+    color: #fff;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 694px;
+  }
+  
+  .hero__btn {
+    padding: 10px 32px;
+  }

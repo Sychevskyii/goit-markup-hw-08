@@ -1,0 +1,63 @@
+// Футер
+
+.footer {
+    background-color: var(--bg-cl);
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .address-container {
+    margin-right: 93px;
+  }
+  
+  .address__footer {
+    font-style: normal;
+    color: #fff;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+    margin-bottom: 9px;
+  }
+  
+  .footer-list__item {
+    margin-bottom: 9px;
+    &:last-child {
+    margin-bottom: 0;
+  }
+  }
+
+  
+  .footer-list__link {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+  }
+  
+  
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .join {
+    margin-right: auto;
+  }
+  
+  .join__text {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .social-list__link--gray {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }

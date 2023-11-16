@@ -1,0 +1,21 @@
+// Логотип
+.logo {
+    margin-right: 93px;
+    color: var(--accent-cl);
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.78px;
+  }
+  
+  .logo__color--dark {
+    color: #000;
+  }
+  
+  .logo__color--white {
+    color: #fff;
+  }
+  
+  .logo-footer {
+    margin-bottom: 20px;
+  }

@@ -1,0 +1,91 @@
+// Проєкти
+
+.projects-type-list {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .projects-type-list__link {
+    transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+  }
+
+  .projects-type-list__link {
+    &:hover,
+    &:focus {
+        .projects-type-list__overlay {
+            transform: translateY(0);
+    opacity: 1;
+        }
+    }
+  }
+  
+  .projects-type-list__info {
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+  }
+  
+  .projects-type-list__title {
+    margin-bottom: 4px;
+  }
+  
+  .projects-type-list__item {
+    background: #fff;
+  }
+  
+  .projects-type-list__title {
+    color: var(--title-cl);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.08px;
+  }
+  
+  .projects-type-list__name {
+    color: var(--txt-cl);
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.48px;
+  }
+  
+  .projects-type-list__overlay-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .projects-type-list__overlay {
+    background: rgba(33, 150, 243, 0.9);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .projects-type-list__text {
+    width: 322px;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.54px;
+  }
+  

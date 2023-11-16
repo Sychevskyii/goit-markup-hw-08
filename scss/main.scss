@@ -1,0 +1,57 @@
+// Змінні
+@import './utils/vars';
+
+// Обнулення
+@import './components/reset';
+
+// Загальні стилі
+@import './components/_general-styles';
+
+// Службові стилі
+
+@import './components/service-styles';
+
+// Спільні елементи на сторінках
+@import './components/btn';
+@import './components/titles';
+@import './components/logo';
+
+// Стилі хедера
+@import './components/page-header';
+
+// Стилі головної секції
+@import './components/page-hero';
+
+// Стилі модального вікна
+@import './components/page-modal';
+
+// Стилі форм
+@import './components/page-forms';
+
+// Стилі секції "about"
+
+@import './components/page-about';
+
+// Стилі секції "specialization"
+
+@import './components/page-specialization';
+
+// Стилі секції "team"
+
+@import './components/page-team';
+
+// Стилі секції "clients"
+
+@import './components/page-clients';
+
+// Стилі секції "footer"
+
+@import './components/page-footer';
+
+// Стилі кнопок фільтру сторінки "portfolio"
+
+@import './components/page-projects-filter';
+
+// Стилі проєктів сторінки "portfolio"
+
+@import './components/page-projects-type';

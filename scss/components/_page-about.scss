@@ -1,0 +1,40 @@
+// Про нас
+.about.section {
+    padding-bottom: 0;
+  }
+  
+  .about-list {
+    display: flex;
+  }
+  
+  .about-list__item {
+    margin-right: 30px;
+    width: 270px;
+    &:last-child {
+        margin-right: 0;
+      }
+  }
+  
+  .about-list__title {
+    color: var(--title-cl);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .about-list__text {
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+  }
+  
+  .about-list__icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+  }

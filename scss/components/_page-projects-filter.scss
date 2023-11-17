@@ -2,14 +2,25 @@
 
 .projects-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 40px;
+
+    @include mq (desktop) {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
   }
   
   .projects-list__item {
     margin-right: 8px;
+    margin-bottom: 15px;
     &:last-child {
     margin-right: 0;
+  }
+
+  @include mq (desktop) {
+    margin-bottom: 0;
   }
   }
   

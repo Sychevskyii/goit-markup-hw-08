@@ -1452,17 +1452,33 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1280px) {
+  .projects-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .projects-list__item {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 .projects-list__item:last-child {
   margin-right: 0;
+}
+@media screen and (min-width: 1280px) {
+  .projects-list__item {
+    margin-bottom: 0;
+  }
 }
 
 .projects-list__btn {
@@ -1499,12 +1515,14 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+  width: 100%;
 }
 
 .projects-type-list__link {
@@ -1539,6 +1557,7 @@ a {
 }
 
 .projects-type-list__item {
+  width: 450px;
   background: #fff;
 }
 

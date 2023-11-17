@@ -13,7 +13,7 @@
       justify-content: center;
     }
 
-    @include mq (desktop) {
+    @include mq (tablet) {
       align-items: center;
       gap: 30px;
     }
@@ -23,6 +23,10 @@
     width: 210px;
     height: 92px;
     color: #afb1b8;
+
+    @include mq (tablet) {
+      width: 226px;
+    }
 
     @include mq (desktop) {
       width: 170px;

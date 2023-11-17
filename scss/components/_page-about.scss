@@ -13,19 +13,25 @@
       align-items: center;
     }
 
-    @include mq (desktop) {
+    @include mq (tablet) {
       flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
     }
   }
   
   .about-list__item {
     width: 100%;
-    @include mq (desktop) {
-      margin-right: 30px;
-      width: 270px;
+
+    @include mq (tablet) {
+      width: 354px;
       &:last-child {
           margin-right: 0;
         }
+    }
+
+    @include mq (desktop) {
+      width: 270px;
     }
   }
   
@@ -38,7 +44,7 @@
     margin-bottom: 10px;
     text-align: center;
 
-    @include mq (desktop) {
+    @include mq (tablet) {
       text-align: left;
     }
   }

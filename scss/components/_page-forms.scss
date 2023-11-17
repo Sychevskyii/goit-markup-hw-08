@@ -3,14 +3,14 @@
 // Форма модального вікна
 
 .modal-form {
-    width: 370px;
+    width: 100%;
 
     @include mq (small-mobile) {
       width: 240px;
     }
 
     @include mq (desktop) {
-      width: 448px;
+      max-width: 448px;
     }
   }
   
@@ -84,8 +84,7 @@
   
   .modal-form__comment {
     resize: none;
-    max-width: 100%;
-    min-width: 370px;
+    width: 100%;
     max-height: 120px;
     min-height: 120px;
     padding: 12px 16px;
@@ -203,6 +202,15 @@
     @include mq (mobile-only) {
       width: 100%;
     }
+
+    @include mq (tablet) {
+      margin-top: 60px;
+    }
+
+    @include mq (desktop) {
+      margin-top: 0;
+      margin-left: auto;
+    }
   }
 
   .form-mailing__title {
@@ -212,6 +220,10 @@
     text-transform: uppercase;
     display: block;
     margin-bottom: 20px;
+
+    @include mq (tablet) {
+      text-align: center;
+    }
   }
   
   .form-mailing__group {
@@ -219,8 +231,9 @@
     flex-direction: column;
     align-items: center;
 
-    @include mq (tablet) {
+    @include mq (desktop) {
       flex-direction: row;
+      align-items: center;
     }
   }
   
@@ -247,9 +260,14 @@
   }
 
   @include mq (tablet) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+
+  @include mq (desktop) {
     width: 358px;
-    margin-right: 12px;
     margin-bottom: 0;
+    margin-right: 12px;
   }
   }
   

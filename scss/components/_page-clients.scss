@@ -2,14 +2,23 @@
 
 .clients-list {
     display: flex;
-    align-items: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include mq (desktop) {
+      align-items: center;
+      gap: 30px;
+    }
   }
   
   .clients-list__item {
-    width: 170px;
+    width: 210px;
     height: 92px;
     color: #afb1b8;
+
+    @include mq (desktop) {
+      width: 170px;
+    }
   }
   
   .clients-list__icon {

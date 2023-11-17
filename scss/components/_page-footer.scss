@@ -5,9 +5,26 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq (tablet) {
+      flex-direction: row;
+      align-items: baseline;
+    }
+  }
   
   .address-container {
-    margin-right: 93px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq (tablet) {
+      display: block;
+      margin-right: 93px;
+    }
   }
   
   .address__footer {
@@ -16,6 +33,20 @@
     line-height: 1.71;
     letter-spacing: 0.42px;
     margin-bottom: 9px;
+  }
+
+  .address {
+    @include mq (mobile-only) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .footer-list {
+    @include mq (mobile-only) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   
   .footer-list__item {
@@ -38,17 +69,20 @@
   }
   }
   
-  
-  .footer-container {
-    display: flex;
-    align-items: baseline;
-  }
-  
   .join {
-    margin-right: auto;
+    margin-bottom: 60px;
+
+    @include mq (tablet) {
+      margin-bottom: 0;
+      margin-right: auto;
+    }
   }
   
   .join__text {
+    @include mq (mobile-only) {
+      text-align: center;
+    }
+
     color: #fff;
     font-size: 14px;
     font-weight: 700;

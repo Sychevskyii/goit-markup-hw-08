@@ -1,11 +1,14 @@
 // Логотип
 .logo {
-    margin-right: 93px;
     color: var(--accent-cl);
     font-family: Raleway;
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 0.78px;
+
+    @include mq (tablet) {
+      margin-right: 93px;
+    }
   }
   
   .logo__color--dark {
@@ -18,4 +21,8 @@
   
   .logo-footer {
     margin-bottom: 20px;
+
+    @include mq (tablet) {
+      text-align: left;
+    }
   }

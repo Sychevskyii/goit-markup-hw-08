@@ -1,9 +1,14 @@
 // Стилі заголовків
 .title {
     color: var(--title-cl);
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
-    letter-spacing: 1.08px;
+    letter-spacing: 0.84px;
     text-align: center;
     margin-bottom: 50px;
+
+    @include mq (desktop) {
+      font-size: 36px;
+      letter-spacing: 1.08px;
+    }
   }

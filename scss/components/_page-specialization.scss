@@ -1,4 +1,11 @@
 // Спеціалізація
+.specialization {
+  display: none;
+  @include mq (desktop) {
+    display: block;
+  }
+}
+
 .specialization-list {
     display: flex;
     gap: 30px;

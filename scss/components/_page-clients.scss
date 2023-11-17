@@ -5,6 +5,10 @@
     flex-wrap: wrap;
     gap: 20px;
 
+    @include mq (small-mobile) {
+      justify-content: center;
+    }
+
     @include mq (desktop) {
       align-items: center;
       gap: 30px;

@@ -8,6 +8,11 @@
     flex-direction: column;
     justify-content: start;
     gap: 55px;
+
+    @include mq (small-mobile) {
+      align-items: center;
+    }
+
     @include mq (desktop) {
       flex-direction: row;
     }
@@ -41,6 +46,10 @@
   .about-list__text {
     line-height: 1.71;
     letter-spacing: 0.42px;
+
+    @include mq (small-mobile) {
+      text-align: center;
+    }
   }
   
   .about-list__icon-container {

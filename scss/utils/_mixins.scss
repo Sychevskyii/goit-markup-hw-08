@@ -1,5 +1,6 @@
 @mixin mq($type) {
     $mobile: 480px;
+    $small-mobile: 320px;
     $tablet: 768px;
     $desktop: 1280px;
 // Телефон
@@ -10,6 +11,11 @@
     }
     @if $type == 'mobile' {
         @media screen and (min-width: $mobile) {
+            @content;
+        }
+    }
+    @if $type == 'small-mobile' {
+        @media screen and (max-width: $small-mobile) {
             @content;
         }
     }

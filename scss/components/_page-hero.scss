@@ -38,6 +38,11 @@
     margin-right: auto;
     width: 360px;
 
+    @include mq (small-mobile) {
+      width: 280px;
+      font-size: 30px;
+    }
+
     @include mq (desktop) {
       width: 694px;
       font-size: 44px;

@@ -23,7 +23,7 @@
   
   .modal-wrapper {
     position: absolute;
-    width: 528px;
+    width: 450px;
     padding: 40px;
     background-color: #fff;
     border-radius: 4px;
@@ -33,6 +33,15 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%) scale(1);
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include mq (small-mobile) {
+      width: 300px;
+      padding: 15px 30px;
+    }
+
+    @include mq (desktop) {
+      width: 528px;
+    }
   }
   
   .modal-wrapper__close {
@@ -51,6 +60,11 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     &:focus {
         border: 1px solid var(--accent-cl);
+      }
+
+      @include mq (small-mobile) {
+        right: 0;
+        top: 0;
       }
   }
 

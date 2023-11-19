@@ -14,7 +14,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>Портфоліо</title>
   </head>
   <body>
@@ -27,13 +27,13 @@
           <ul class="navigation__list">
             <li class="navigation__item">
               <a
-                class="navigation__link navigation__link--active"
+                class="navigation__link "
                 href="./index.html"
                 >Студія</a
               >
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="./portfolio.html">Портфоліо</a>
+              <a class="navigation__link navigation__link--active" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="#">Контакти</a>
@@ -65,53 +65,57 @@
           aria-controls="mobile-menu"
         >
           <svg class="toggle-icon-open" width="40" height="40">
-          <use href="./images/icons/sprite.svg#icon-burger"></use>
+            <use href="./images/icons/sprite.svg#icon-burger"></use>
           </svg>
         </button>
         <div class="menu-container js-menu-container" id="mobile-menu">
           <button class="menu-toggle js-close-menu">
             <svg class="toggle-icon-close" width="24" height="24">
-            <use href="./images/icons/sprite.svg#icon-close"></use>
+              <use href="./images/icons/sprite.svg#icon-close"></use>
             </svg>
           </button>
 
           <ul class="mobile-menu">
-            <li><a href="./index.html" class="navigation__link link">Студія</a></li>
-            <li><a href="./portfolio.html" class="navigation__link link">Портфоліо</a></li>
+            <li>
+              <a href="./index.html" class="navigation__link link">Студія</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="navigation__link link"
+                >Портфоліо</a
+              >
+            </li>
             <li><a href="" class="navigation__link link">Контакти</a></li>
           </ul>
           <ul class="mobile-contacts-list">
             <li class="mobile-contacts-list__item">
-              <a class="mobile-contacts-list__link link" href="tel:+380961111111">
+              <a
+                class="mobile-contacts-list__link link"
+                href="tel:+380961111111"
+              >
                 +38 096 111 11 11</a
               >
             </li>
             <li class="mobile-contacts-list__item">
-              <a class="mobile-contacts-list__link mobile-contacts-list__link--small link" href="mailto:info@devstudio.com">
+              <a
+                class="mobile-contacts-list__link mobile-contacts-list__link--small link"
+                href="mailto:info@devstudio.com"
+              >
                 info@devstudio.com</a
               >
             </li>
           </ul>
-           <ul class="mobile-socials-list">
+          <ul class="mobile-socials-list">
             <li class="mobile-socials-list__item">
-              <a class="mobile-socials-list__link link" href="">
-                Instagram</a
-              >
+              <a class="mobile-socials-list__link link" href=""> Instagram</a>
             </li>
             <li class="mobile-socials-list__item">
-              <a class="mobile-socials-list__link link" href="">
-                Twitter</a
-              >
+              <a class="mobile-socials-list__link link" href=""> Twitter</a>
             </li>
             <li class="mobile-socials-list__item">
-              <a class="mobile-socials-list__link link" href="">
-                Facebook</a
-              >
+              <a class="mobile-socials-list__link link" href=""> Facebook</a>
             </li>
             <li class="mobile-socials-list__item">
-              <a class="mobile-socials-list__link link" href="">
-                LinkedIn</a
-              >
+              <a class="mobile-socials-list__link link" href=""> LinkedIn</a>
             </li>
           </ul>
         </div>
@@ -122,19 +126,32 @@
         <div class="container">
           <ul class="projects-list">
             <li class="projects-list__item">
-              <button class="projects-list__btn projects-list__btn--active btn " type="button">Усі</button>
+              <button
+                class="projects-list__btn projects-list__btn--active btn"
+                type="button"
+              >
+                Усі
+              </button>
             </li>
             <li class="projects-list__item">
-              <button class="projects-list__btn btn" type="button">Веб-сайти</button>
+              <button class="projects-list__btn btn" type="button">
+                Веб-сайти
+              </button>
             </li>
             <li class="projects-list__item">
-              <button class="projects-list__btn btn" type="button">Додатки</button>
+              <button class="projects-list__btn btn" type="button">
+                Додатки
+              </button>
             </li>
             <li class="projects-list__item">
-              <button class="projects-list__btn btn" type="button">Дизайн</button>
+              <button class="projects-list__btn btn" type="button">
+                Дизайн
+              </button>
             </li>
             <li class="projects-list__item">
-              <button class="projects-list__btn btn" type="button">Маркетинг</button>
+              <button class="projects-list__btn btn" type="button">
+                Маркетинг
+              </button>
             </li>
           </ul>
           <ul class="projects-type-list">
@@ -142,10 +159,16 @@
               <a class="projects-type-list__link" href="">
                 <div class="projects-type-list__overlay-wrapper">
                   <img
-                    src="./images/portfolio/portfolio-img1.jpg"
+                    srcset="
+                      ./images/portfolio/portfolio-img1-sm.webp 450w,
+                      ./images/portfolio/portfolio-img1-sm@2x.webp 900w,
+                      ./images/portfolio/portfolio-img1-md.webp 354w,
+                      ./images/portfolio/portfolio-img1-md@2x.webp 708w,
+                      ./images/portfolio/portfolio-img1-lg.webp 370w,
+                      ./images/portfolio/portfolio-img1-lg@2x.webp 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                     alt="Laptop"
-                    width="370"
-                    height="294"
                   />
                   <div class="projects-type-list__overlay">
                     <p class="projects-type-list__text">
@@ -166,10 +189,16 @@
               <a class="projects-type-list__link" href="">
                 <div class="projects-type-list__overlay-wrapper">
                   <img
-                    src="./images/portfolio/portfolio-img2.jpg"
+                    srcset="
+                    ./images/portfolio/portfolio-img2-sm.webp 450w,
+                    ./images/portfolio/portfolio-img2-sm@2x.webp 900w,
+                    ./images/portfolio/portfolio-img2-md.webp 354w,
+                    ./images/portfolio/portfolio-img2-md@2x.webp 708w,
+                    ./images/portfolio/portfolio-img2-lg.webp 370w,
+                    ./images/portfolio/portfolio-img2-lg@2x.webp 740w
+                     "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                     alt="Laptop"
-                    width="370"
-                    height="294"
                   />
                   <div class="projects-type-list__overlay">
                     <p class="projects-type-list__text">
@@ -192,10 +221,16 @@
               <a class="projects-type-list__link" href=""
                 ><div class="projects-type-list__overlay-wrapper">
                   <img
-                    src="./images/portfolio/portfolio-img3.jpg"
+                    srcset="
+                    ./images/portfolio/portfolio-img3-sm.webp 450w,
+                    ./images/portfolio/portfolio-img3-sm@2x.webp 900w,
+                    ./images/portfolio/portfolio-img3-md.webp 354w,
+                    ./images/portfolio/portfolio-img3-md@2x.webp 708w,
+                    ./images/portfolio/portfolio-img3-lg.webp 370w,
+                    ./images/portfolio/portfolio-img3-lg@2x.webp 740w
+                     "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                     alt="Laptop"
-                    width="370"
-                    height="294"
                   />
                   <div class="projects-type-list__overlay">
                     <p class="projects-type-list__text">
@@ -216,10 +251,16 @@
               <a class="projects-type-list__link" href=""
                 ><div class="projects-type-list__overlay-wrapper">
                   <img
-                    src="./images/portfolio/portfolio-img4.jpg"
+                    srcset="
+                    ./images/portfolio/portfolio-img4-sm.webp 450w,
+                    ./images/portfolio/portfolio-img4-sm@2x.webp 900w,
+                    ./images/portfolio/portfolio-img4-md.webp 354w,
+                    ./images/portfolio/portfolio-img4-md@2x.webp 708w,
+                    ./images/portfolio/portfolio-img4-lg.webp 370w,
+                    ./images/portfolio/portfolio-img4-lg@2x.webp 740w
+                     "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                     alt="Laptop"
-                    width="370"
-                    height="294"
                   />
                   <div class="projects-type-list__overlay">
                     <p class="projects-type-list__text">
@@ -240,10 +281,16 @@
               <a class="projects-type-list__link" href=""
                 ><div class="projects-type-list__overlay-wrapper">
                   <img
-                    src="./images/portfolio/portfolio-img5.jpg"
+                    srcset="
+                    ./images/portfolio/portfolio-img5-sm.webp 450w,
+                    ./images/portfolio/portfolio-img5-sm@2x.webp 900w,
+                    ./images/portfolio/portfolio-img5-md.webp 354w,
+                    ./images/portfolio/portfolio-img5-md@2x.webp 708w,
+                    ./images/portfolio/portfolio-img5-lg.webp 370w,
+                    ./images/portfolio/portfolio-img5-lg@2x.webp 740w
+                     "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                     alt="Laptop"
-                    width="370"
-                    height="294"
                   />
                   <div class="projects-type-list__overlay">
                     <p class="projects-type-list__text">
@@ -264,11 +311,17 @@
               <a class="projects-type-list__link" href="">
                 <div class="projects-type-list__overlay-wrapper">
                   <img
-                    src="./images/portfolio/portfolio-img6.jpg"
-                    alt="Laptop"
-                    width="370"
-                    height="294"
-                  />
+                  srcset="
+                  ./images/portfolio/portfolio-img6-sm.webp 450w,
+                  ./images/portfolio/portfolio-img6-sm@2x.webp 900w,
+                  ./images/portfolio/portfolio-img6-md.webp 354w,
+                  ./images/portfolio/portfolio-img6-md@2x.webp 708w,
+                  ./images/portfolio/portfolio-img6-lg.webp 370w,
+                  ./images/portfolio/portfolio-img6-lg@2x.webp 740w
+                   "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  alt="Laptop"
+                />
                   <div class="projects-type-list__overlay">
                     <p class="projects-type-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -290,11 +343,17 @@
               <a class="projects-type-list__link" href=""
                 ><div class="projects-type-list__overlay-wrapper">
                   <img
-                    src="./images/portfolio/portfolio-img7.jpg"
-                    alt="Laptop"
-                    width="370"
-                    height="294"
-                  />
+                  srcset="
+                  ./images/portfolio/portfolio-img7-sm.webp 450w,
+                  ./images/portfolio/portfolio-img7-sm@2x.webp 900w,
+                  ./images/portfolio/portfolio-img7-md.webp 354w,
+                  ./images/portfolio/portfolio-img7-md@2x.webp 708w,
+                  ./images/portfolio/portfolio-img7-lg.webp 370w,
+                  ./images/portfolio/portfolio-img7-lg@2x.webp 740w
+                   "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  alt="Laptop"
+                />
                   <div class="projects-type-list__overlay">
                     <p class="projects-type-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -316,11 +375,17 @@
               <a class="projects-type-list__link" href=""
                 ><div class="projects-type-list__overlay-wrapper">
                   <img
-                    src="./images/portfolio/portfolio-img8.jpg"
-                    alt="Laptop"
-                    width="370"
-                    height="294"
-                  />
+                  srcset="
+                  ./images/portfolio/portfolio-img8-sm.webp 450w,
+                  ./images/portfolio/portfolio-img8-sm@2x.webp 900w,
+                  ./images/portfolio/portfolio-img8-md.webp 354w,
+                  ./images/portfolio/portfolio-img8-md@2x.webp 708w,
+                  ./images/portfolio/portfolio-img8-lg.webp 370w,
+                  ./images/portfolio/portfolio-img8-lg@2x.webp 740w
+                   "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  alt="Laptop"
+                />
                   <div class="projects-type-list__overlay">
                     <p class="projects-type-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -340,10 +405,16 @@
               <a class="projects-type-list__link" href=""
                 ><div class="projects-type-list__overlay-wrapper">
                   <img
-                    src="./images/portfolio/portfolio-img9.jpg"
+                    srcset="
+                    ./images/portfolio/portfolio-img9-sm.webp 450w,
+                    ./images/portfolio/portfolio-img9-sm@2x.webp 900w,
+                    ./images/portfolio/portfolio-img9-md.webp 354w,
+                    ./images/portfolio/portfolio-img9-md@2x.webp 708w,
+                    ./images/portfolio/portfolio-img9-lg.webp 370w,
+                    ./images/portfolio/portfolio-img9-lg@2x.webp 740w
+                     "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
                     alt="Laptop"
-                    width="370"
-                    height="294"
                   />
                   <div class="projects-type-list__overlay">
                     <p class="projects-type-list__text">
@@ -374,9 +445,7 @@
             <p class="address__footer">м. Київ, пр-т Лесі Українки, 26</p>
             <ul class="footer-list">
               <li class="footer-list__item">
-                <a
-                  class="footer-list__link"
-                  href="mailto:info@devstudio.com"
+                <a class="footer-list__link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>

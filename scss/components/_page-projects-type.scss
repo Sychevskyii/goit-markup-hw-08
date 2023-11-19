@@ -6,6 +6,10 @@
     flex-wrap: wrap;
     gap: 30px;
     width: 100%;
+
+    @include mq (tablet) {
+      flex-direction: row;
+    }
   }
   
   .projects-type-list__link {
@@ -44,6 +48,15 @@
   .projects-type-list__item {
     width: 450px;
     background: #fff;
+
+    @include mq (small-mobile) {
+      width: 290px;
+    }
+
+
+    @include mq (tablet) {
+      width: 354px;
+    }
   }
   
   .projects-type-list__title {
@@ -89,5 +102,10 @@
     font-weight: 400;
     line-height: 1.55;
     letter-spacing: 0.54px;
+
+    @include mq (small-mobile) {
+      width: 280px;
+      font-size: 16px;
+    }
   }
   

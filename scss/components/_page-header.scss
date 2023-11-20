@@ -23,6 +23,25 @@
     font-size: 40px;
     font-weight: 500;
     letter-spacing: 0.8px;
+    color: var(--title-cl);
+
+    &--active {
+      color: var(--accent-cl);
+      @include mq (tablet) {
+        &::after {
+            content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--accent-cl);
+        }
+      }
+    }
+    
+
     &:hover {
       color: var(--accent-cl);
     }
@@ -46,24 +65,8 @@
     }
   }
   }
-
   
   
-  .navigation__link--active {
-    @include mq (tablet) {
-      color: var(--accent-cl);
-      &::after {
-          content: '';
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 100%;
-      height: 4px;
-      border-radius: 2px;
-      background-color: var(--accent-cl);
-      }
-    }
-  }
   
   .contacts-list {
     display: none;

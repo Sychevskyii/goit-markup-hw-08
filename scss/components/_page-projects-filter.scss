@@ -6,6 +6,10 @@
     justify-content: start;
     margin-bottom: 40px;
 
+    @include mq (tablet) {
+      justify-content: center;
+    }
+
     @include mq (desktop) {
       justify-content: center;
       margin-bottom: 50px;

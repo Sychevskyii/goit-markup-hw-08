@@ -24,6 +24,10 @@
     height: 92px;
     color: #afb1b8;
 
+    @include mq (mobile) {
+      width: 200px;
+    }
+
     @include mq (tablet) {
       width: 226px;
     }

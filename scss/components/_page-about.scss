@@ -1,6 +1,10 @@
 // Про нас
 .about.section {
-    padding-bottom: 0;
+    padding-bottom: 60px;
+
+    @include mq (desktop) {
+      padding-bottom: 118px;
+    }
   }
   
   .about-list {

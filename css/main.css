@@ -32,6 +32,16 @@
   }
 }
 
+.toggle-icon-open {
+  -webkit-transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-icon-close {
+  -webkit-transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .menu-toggle {
   min-height: 40px;
   min-width: 40px;
@@ -41,9 +51,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: auto;
   background-color: transparent;
   padding: 10px 0;
@@ -52,8 +62,11 @@
   border-radius: 50%;
   outline: none;
 }
-.menu-toggle:hover, .menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+.menu-toggle:hover .toggle-icon-open, .menu-toggle:focus .toggle-icon-open {
+  fill: var(--accent-cl);
+}
+.menu-toggle:hover .toggle-icon-close, .menu-toggle:focus .toggle-icon-close {
+  fill: var(--accent-cl);
 }
 @media screen and (min-width: 768px) {
   .menu-toggle {
@@ -126,7 +139,6 @@
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  color: var(--title-cl);
   text-decoration: none;
 }
 
@@ -147,7 +159,7 @@
   letter-spacing: 0.68px;
   color: var(--txt-cl);
 }
-.mobile-contacts-list__link:hover {
+.mobile-contacts-list__link--blue {
   color: var(--accent-cl);
 }
 .mobile-contacts-list__link--small {
@@ -181,6 +193,24 @@
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.36px;
+}
+@media screen and (max-width: 320px) {
+  .mobile-socials-list__link {
+    font-size: 10px;
+  }
+}
+
+.mobile-socials-list__item {
+  position: relative;
+}
+.mobile-socials-list__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.2);
 }
 
 body {
@@ -373,6 +403,22 @@ a {
   font-size: 40px;
   font-weight: 500;
   letter-spacing: 0.8px;
+  color: var(--title-cl);
+}
+.navigation__link--active {
+  color: var(--accent-cl);
+}
+@media screen and (min-width: 768px) {
+  .navigation__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-cl);
+  }
 }
 .navigation__link:hover {
   color: var(--accent-cl);
@@ -396,22 +442,6 @@ a {
   }
   .navigation__link:hover, .navigation__link:focus {
     color: var(--accent-cl);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .navigation__link--active {
-    color: var(--accent-cl);
-  }
-  .navigation__link--active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-cl);
   }
 }
 
@@ -490,53 +520,57 @@ a {
   background-position: center;
   background-size: cover;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
   background-size: cover;
   max-width: 1600px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-bg-sm.png);
   background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg-sm.png);
-  background-image: -webkit-image-set(url(../images/hero/hero-bg-sm.webp) 1x), -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-  background-image: -webkit-image-set(url(../images/hero/hero-bg-sm.webp) 1x), linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), -webkit-image-set(url(../images/hero/hero-bg-sm.webp) 1x);
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), -webkit-image-set(url(../images/hero/hero-bg-sm.webp) 1x);
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 @media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 192dpi), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-bg-sm@2x.png);
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg-sm@2x.png);
-    background-image: -webkit-image-set(url(../images/hero/hero-bg-sm@2x.webp) 2x), -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-    background-image: -webkit-image-set(url(../images/hero/hero-bg-sm@2x.webp) 2x), linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), to(-webkit-image-set(url(../images/hero/hero-bg-sm@2x.webp) 2x)));
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), -webkit-image-set(url(../images/hero/hero-bg-sm@2x.webp) 2x));
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-bg-md.png);
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg-md.png);
-    background-image: -webkit-image-set(url(../images/hero/hero-bg-md.webp) 1x), -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-    background-image: -webkit-image-set(url(../images/hero/hero-bg-md.webp) 1x), linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), to(-webkit-image-set(url(../images/hero/hero-bg-md.webp) 1x)));
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), -webkit-image-set(url(../images/hero/hero-bg-md.webp) 1x));
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-bg-md@2x.png);
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg-md@2x.png);
-    background-image: -webkit-image-set(url(../images/hero/hero-bg-md@2x.webp) 2x), -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-    background-image: -webkit-image-set(url(../images/hero/hero-bg-md@2x.webp) 2x), linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), to(-webkit-image-set(url(../images/hero/hero-bg-md@2x.webp) 2x)));
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), -webkit-image-set(url(../images/hero/hero-bg-md@2x.webp) 2x));
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-bg-lg.png);
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg-lg.png);
-    background-image: -webkit-image-set(url(../images/hero/hero-bg-lg.webp) 1x), -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-    background-image: -webkit-image-set(url(../images/hero/hero-bg-lg.webp) 1x), linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), to(-webkit-image-set(url(../images/hero/hero-bg-lg.webp) 1x)));
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), -webkit-image-set(url(../images/hero/hero-bg-lg.webp) 1x));
   }
 }
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-bg-lg@2x.png);
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg-lg@2x.png);
-    background-image: -webkit-image-set(url(../images/hero/hero-bg-lg@2x.webp) 2x), -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-    background-image: -webkit-image-set(url(../images/hero/hero-bg-lg@2x.webp) 2x), linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), color-stop(rgba(47, 48, 58, 0.4)), to(-webkit-image-set(url(../images/hero/hero-bg-lg@2x.webp) 2x)));
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4), -webkit-image-set(url(../images/hero/hero-bg-lg@2x.webp) 2x));
   }
 }
 
@@ -1006,7 +1040,12 @@ a {
 }
 
 .about.section {
-  padding-bottom: 0;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1280px) {
+  .about.section {
+    padding-bottom: 118px;
+  }
 }
 
 .about-list {
@@ -1303,6 +1342,11 @@ a {
   height: 92px;
   color: #afb1b8;
 }
+@media screen and (min-width: 480px) {
+  .clients-list__item {
+    width: 200px;
+  }
+}
 @media screen and (min-width: 768px) {
   .clients-list__item {
     width: 226px;
@@ -1504,6 +1548,13 @@ a {
           justify-content: start;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 768px) {
+  .projects-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 @media screen and (min-width: 1280px) {
   .projects-list {
     -webkit-box-pack: center;
@@ -1569,6 +1620,13 @@ a {
   gap: 30px;
   width: 100%;
 }
+@media screen and (max-width: 767.98px) {
+  .projects-type-list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 @media screen and (min-width: 768px) {
   .projects-type-list {
     -webkit-box-orient: horizontal;
@@ -1597,6 +1655,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
 }
 .projects-type-list__link:hover .projects-type-list__overlay, .projects-type-list__link:focus .projects-type-list__overlay {
   -webkit-transform: translateY(0);
@@ -1609,9 +1668,12 @@ a {
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
   border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .projects-type-list__title {
@@ -1621,18 +1683,8 @@ a {
 .projects-type-list__item {
   width: 450px;
   background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767.98px) {
   .projects-type-list__item {
     width: 290px;
   }
@@ -1640,6 +1692,11 @@ a {
 @media screen and (min-width: 768px) {
   .projects-type-list__item {
     width: 354px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .projects-type-list__item {
+    width: 370px;
   }
 }
 
@@ -1700,6 +1757,7 @@ a {
 @media screen and (max-width: 320px) {
   .projects-type-list__text {
     width: 280px;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 0 20px 0 20px;
   }
 }/*# sourceMappingURL=main.css.map */

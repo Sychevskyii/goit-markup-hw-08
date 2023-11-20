@@ -280,4 +280,8 @@
     @include mq (mobile-only) {
       text-align: center;
     }
+
+    @include mq (desktop) {
+      text-align: left;
+    }
   }

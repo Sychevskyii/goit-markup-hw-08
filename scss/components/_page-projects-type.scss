@@ -56,16 +56,16 @@
   .projects-type-list__item {
     background: #fff;
 
+    @include mq (mobile) {
+      width: 450px;
+    }
+    
     @include mq (tablet) {
       width: 354px;
     }
 
     @include mq (desktop) {
       width: 370px;
-    }
-
-    @include mq (mobile) {
-      width: 450px;
     }
   }
   

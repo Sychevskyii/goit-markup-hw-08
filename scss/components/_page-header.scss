@@ -26,6 +26,9 @@
     letter-spacing: 0.8px;
     color: var(--title-cl);
     transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    &--active {
+      color: var(--accent-cl);
+    }
     
     &:hover {
       color: var(--accent-cl);
@@ -33,12 +36,6 @@
 
     @include mq (small-mobile) {
       font-size: 30px;
-    }
-
-    @include mq (mobile) {
-      &--active {
-        color: var(--accent-cl);
-      }
     }
 
     @include mq (tablet) {
